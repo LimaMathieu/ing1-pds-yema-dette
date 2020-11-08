@@ -104,6 +104,7 @@ public class TestMainSocket {
 				System.out.println("Sensors setting >> 2 ");
 				System.out.println("simulation >> 3 ");
 				System.out.println("traffic settings >> 4 ");
+				System.out.println("tramway settings >> 5 ");
 
 				String rep1 = enter.nextLine();
 				{
@@ -445,7 +446,10 @@ public class TestMainSocket {
 					}
 					
 					
-				}}
+				} else if (rep1.equals("4")) {
+					
+				}
+				}
 				
 				System.out.println("Are you finished ? Y/N");
 				String r = enterFin.nextLine();

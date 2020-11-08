@@ -40,6 +40,10 @@ public class Factory {
 				return new CarDAO();
 		else if (target.contentEquals("infotraffic"))
 			return new infotrafficDAO();
+		else if (target.contentEquals("tramway"))
+			return new TramwayDAO();
+		else if (target.contentEquals("station"))
+			return new StationDAO();
 		else
 				return null; 
 	}
