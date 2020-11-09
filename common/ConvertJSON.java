@@ -4,6 +4,9 @@ import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import tramway.Station;
+import tramway.Tramway;
 /**
  * ConvertJSON is common to server and client
  * it allows to do the conversion that we need
@@ -279,6 +282,48 @@ public class ConvertJSON {
 		}
 		return jsonString;
 		}
+    public Station StationtoJson(String device) {
+    	Station station1 = new Station();
+    	String jsonString ="";
+    	try {
+    		station1 = mapper.readValue(jsonString, Station.class);
+    	}
+    	catch(IOException e) {
+    		e.printStackTrace();
+    	}
+		return station1;
+    }
+    public String JsontoStation(Station station) {
+    	String jsonString ="";
+    	try {
+    		jsonString = mapper.writeValueAsString(station);
+    	}
+    	catch(IOException e) {
+    		e.printStackTrace();
+    	}
+		return jsonString;
+    }
+    public Tramway TramwaytoJson(String device) {
+    	Tramway tramway1 = new Tramway();
+    	String jsonString ="";
+    	try {
+    		tramway1 = mapper.readValue(jsonString, Tramway.class);
+    	}
+    	catch(IOException e) {
+    		e.printStackTrace();
+    	}
+		return tramway1;
+    }
+    public String JsontoTramway(Tramway tram) {
+    	String jsonString ="";
+    	try {
+    		jsonString = mapper.writeValueAsString(tram);
+    	}
+    	catch(IOException e) {
+    		e.printStackTrace();
+    	}
+		return jsonString;
+    }
 	
 	
 }
